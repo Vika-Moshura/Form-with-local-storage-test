@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+</head>
+
+<body>
+    <form name="signUp" class="container signUp">
+        <p>Please sign up</p>
+        <div class="form-item">
+            <input id="firstName" type="text" name="firstName" required>
+            <label for="firstName">First name</label>
+        </div>
+        <div class="form-item">
+            <input id="lastName" type="text" name="lastName" required>
+            <label for="lastName">Last Name</label>
+        </div>
+        <div class="form-item">
+            <input id="email" type="email" name="email" required>
+            <label for="email">Email address</label>
+        </div>
+        <div class="form-item">
+            <input id="password" type="password" name="password" required>
+            <label for="password">Password (min 5 symbols)</label>
+        </div>
+        <input type="button" name="signUpbtn" value="Sign up">
+        <p class="toSignIn">Sign in now</p>
+    </form>
+    <form name="signIn" class="container signIn">
+        <p>Please sign in</p>
+        <div class="form-item">
+            <input id="emailSignIn" type="email" name="signInemail">
+            <label for="emailSignIn">Email address</label>
+        </div>
+        <div class="form-item">
+            <input id="passwordSignIn" type="password" name="signInpassword">
+            <label for="passwordSignIn">Password</label>
+        </div>
+        <input type="button" name="signInbtn" value="Sign in">
+        <p class="toSignUp">Sign up now</p>
+    </form>
+    <div class="container profile">
+        <div class="photo"></div>
+        <p class="profile-name"></p>
+        <p class="profile-email"></p>
+        <p>Designer & Web Developer</p>
+        <input type="button" class="signOutbtn" value="Sign out">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

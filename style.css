@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 500px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+input {
+    width: 100%;
+    height: 50px;
+    font-size: 16px;
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 0 0 2px 2px rgb(173, 235, 235);
+}
+
+.form-item {
+    position: relative;
+    margin-top: 30px;
+}
+
+.labelFocus {
+    top: 5px;
+    font-size: 12px;
+    transition-duration: 2s;
+}
+
+label {
+    position: absolute;
+    left: 10px;
+    top: 12px;
+    font-size: 18px;
+    transition-duration: 2s;
+}
+
+.signUp p,
+.signIn p {
+    text-align: center;
+    font-size: 35px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+p.toSignIn,
+p.toSignUp {
+    margin-top: 10px;
+    text-align: left;
+    color: rgb(6, 167, 151);
+    font-size: 16px;
+    cursor: pointer;
+}
+
+[type="button"] {
+    background-color: rgb(173, 235, 235);
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 50px;
+}
+
+.signIn [type="button"],
+.profile [type="button"] {
+    background-color: rgb(4, 162, 7)
+}
+
+.signIn [type="button"]:hover,
+.profile [type="button"]:hover {
+    background-color: rgb(17, 110, 18)
+}
+
+[type="button"]:hover {
+    background-color: rgb(1, 142, 142);
+    color: white;
+}
+
+.signIn {
+    display: none;
+}
+
+.profile {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.photo {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    background-image: url(images/icon-profile.png);
+    background-position: center;
+}
+
+.profile p {
+    color: rgb(136, 134, 134);
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+.photo+p {
+    margin-top: 40px;
+}
+
+.invalid {
+    box-shadow: 0 0 2px 2px rgb(222, 23, 23);
+}
+
+.invalid::after {
+    display: block;
+    content: '\e9b8';
+    position: absolute;
+    font-family: unicons-line;
+    color: red;
+    top: 5px;
+    right: 0;
+    font-size: 35px;
+}
+
+.valid {
+    box-shadow: 0 0 2px 2px rgb(49, 222, 23);
+}
+
+.valid::after {
+    display: block;
+    content: '\e9c3';
+    position: absolute;
+    font-family: unicons-line;
+    color: green;
+    top: 5px;
+    right: 0;
+    font-size: 35px;
+}
+
+.userExists::before {
+    content: 'This email already exists';
+    position: absolute;
+    display: block;
+    bottom: -30px;
+    left: 0;
+    background-color: rgb(255, 0, 0);
+    width: 315px;
+    height: 30px;
+}
+
+.fill::before {
+    content: 'Fill in the form';
+    position: absolute;
+    display: block;
+    bottom: -30px;
+    left: 0;
+    background-color: rgb(255, 0, 0);
+    width: 315px;
+    height: 30px;
+}
+
+.incorrect::before {
+    content: 'Incorrect email or password';
+    position: absolute;
+    display: block;
+    bottom: -30px;
+    left: 0;
+    background-color: rgb(255, 0, 0);
+    width: 315px;
+    height: 30px;
+}
